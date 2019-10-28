@@ -1,0 +1,28 @@
+{
+    "name": "alexgo93/php_pairs",
+    "description": "library for pairs data structure",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "alexgo93",
+            "email": "alekseimell5644@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/Pair.php"
+        ]
+    },
+    "require": {
+        "php": "7.3.*"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.4",
+        "phpunit/phpunit": "^8"
+    },
+    "scripts": {
+        "phpcs": "phpcs",
+        "phpunit": "vendor/bin/phpunit"
+    }
+}
