@@ -11,7 +11,7 @@ Class PairTest extends TestCase
 
     public function __construct($name = null, array $data = [], $dataName = '')
     {
-        $this->pair = new Pair(1, new Pair(3,4));
+        $this->pair = new Pair(1, new Pair(3));
         parent::__construct($name, $data, $dataName);
     }
 
@@ -20,18 +20,23 @@ Class PairTest extends TestCase
         $this->assertInstanceOf(Pair::class, $this->pair, "Your object is not instance of Pair");
     }
 
-    public function testCarMethod(): void
+    public function testGetValue(): void
     {
-        $this->assertTrue($this->pair->car() == 1, "Car method returns value isn't equals assertion value");
+        $this->assertTrue($this->pair->getValue() == 1, "Car method returns value isn't equals assertion value");
     }
 
-    public function testCdrMethod(): void
+    public function testGetNext(): void
     {
-        $this->assertTrue("3, 4" == $this->pair->cdr(), "Cdr method returns value isn't equals assertion value");
+        $this->assertTrue("3,null" == $this->pair->getNext(), "Cdr method returns value isn't equals assertion value");
     }
 
     public function testPairToString(): void
     {
         $this->assertIsString((string)$this->pair, "Return value not a string type");
+    }
+
+    public function testToString(): void
+    {
+        $this->assertEquals('1,3,null', (string)$this->pair, "Expected value is not equal actual");
     }
 }

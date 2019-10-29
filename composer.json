@@ -11,7 +11,8 @@
     ],
     "autoload": {
         "files": [
-            "src/Pair.php"
+            "src/Pair.php",
+            "tests/PairTest.php"
         ]
     },
     "require": {
