@@ -3,6 +3,7 @@
     "description": "library for pairs data structure",
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "alexgo93",
